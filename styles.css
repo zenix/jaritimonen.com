@@ -1,0 +1,170 @@
+body {
+    background-color: white;
+    font-family: 'Karla', sans-serif;
+    background-image: url("static/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90%;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
+    min-height: 95vh;
+    max-width: 90vh;
+    padding: 0.5em;
+
+}
+
+.flex-parent-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-container {
+
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: center;
+    width: 60%;
+    min-height: 100%;
+}
+
+.flex-item {
+    display: flex;
+    padding: 0.5em;
+    margin: 0.5em;
+    flex-grow: 1;
+    width: 95%;
+    justify-content: center;
+    flex: 1 0 auto;
+
+}
+
+.small {
+    max-height: 7%;
+}
+.flex-parent {
+    display: flex;
+}
+
+.gray {
+    background-color:whitesmoke;
+}
+
+.cert {
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.link {
+    flex: 1 0 auto;
+}
+
+
+@media (max-width: 800px) {
+   
+    .face {
+        background-size: cover;
+        max-height: 100%;
+    }
+    .flex-item {
+        padding: unset;
+        width: 100%;
+    }
+    .no-wrap {
+        flex-wrap: unset !important;
+        min-width: unset !important;
+    }
+    .flex-container {
+        border: unset;
+        min-height: 150vh;
+        width: 90%;
+    }
+    .flex-parent {
+        flex-wrap: wrap;
+    }
+    .flex-item-row {
+        min-width: 50%;
+    }
+  }
+
+.flex-item-row {
+    display: flex;
+    padding: 0.1em;
+    margin: 0.5em;
+    flex: 1 0 auto;
+}
+.center {
+
+    text-align: center;
+}
+
+.name {
+    font-weight: bold;
+
+}
+
+.job-title {
+}
+
+.face {
+    background-image: url("static/face-lines.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+}
+
+.aws-arch {
+    background-image: url("static/AWS-Assoc-Cert.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.jcp {
+    background-image: url("static/java_cert_prog.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.jcd {
+    background-image: url("static/java_cert_dev.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.ocm {
+    background-image: url("static/OCM_JavaEE5EntArchitect_clr.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.linkedin {
+    background-image: url("static/Logo-2C-66px-R.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+}
+
+.twitter {
+    background-image: url("static/Twitter_Social_Icon_Square_Color.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.github {
+    background-image: url("static/Octocat.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
