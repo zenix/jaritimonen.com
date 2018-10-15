@@ -1,28 +1,194 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27145617-1"></script>
-        <script>
+<head>
+    <script
+    async
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27145617-1"></script>
+    <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'UA-27145617-1');
-        </script>
+    </script>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Jari Timonen, Software Architect and Cloud Specialist</title>
-        <meta name="description" content="Hands-on Software Architect and Cloud Architect with coaching and team leadership skills.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jari Timonen, Software Architect and Cloud Specialist</title>
+    <meta name="description" content="Hands-on Software Architect and Cloud Architect with coaching and team leadership skills.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Karla"  as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
         <link rel="stylesheet" href="styles.css">
+    </noscript>
+    
+    <script>
+           /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+            /* This file is meant as a standalone workflow for
+            - testing support for link[rel=preload]
+            - enabling async CSS loading in browsers that do not support rel=preload
+            - applying rel preload css once loaded, whether supported or not.
+            */
+            (function( w ){
+                "use strict";
+                // rel=preload support test
+                if( !w.loadCSS ){
+                    w.loadCSS = function(){};
+                }
+                // define on the loadCSS obj
+                var rp = loadCSS.relpreload = {};
+                // rel=preload feature support test
+                // runs once and returns a function for compat purposes
+                rp.support = (function(){
+                    var ret;
+                    try {
+                        ret = w.document.createElement( "link" ).relList.supports( "preload" );
+                    } catch (e) {
+                        ret = false;
+                    }
+                    return function(){
+                        return ret;
+                    };
+                })();
+
+                // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+                // then change that media back to its intended value on load
+                rp.bindMediaToggle = function( link ){
+                    // remember existing media attr for ultimate state, or default to 'all'
+                    var finalMedia = link.media || "all";
+
+                    function enableStylesheet(){
+                        link.media = finalMedia;
+                    }
+
+                    // bind load handlers to enable media
+                    if( link.addEventListener ){
+                        link.addEventListener( "load", enableStylesheet );
+                    } else if( link.attachEvent ){
+                        link.attachEvent( "onload", enableStylesheet );
+                    }
+
+                    // Set rel and non-applicable media type to start an async request
+                    // note: timeout allows this to happen async to let rendering continue in IE
+                    setTimeout(function(){
+                        link.rel = "stylesheet";
+                        link.media = "only x";
+                    });
+                    // also enable media after 3 seconds,
+                    // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+                    setTimeout( enableStylesheet, 3000 );
+                };
+
+                // loop through link elements in DOM
+                rp.poly = function(){
+                    // double check this to prevent external calls from running
+                    if( rp.support() ){
+                        return;
+                    }
+                    var links = w.document.getElementsByTagName( "link" );
+                    for( var i = 0; i < links.length; i++ ){
+                        var link = links[ i ];
+                        // qualify links to those with rel=preload and as=style attrs
+                        if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+                            // prevent rerunning on link
+                            link.setAttribute( "data-loadcss", true );
+                            // bind listeners to toggle media back
+                            rp.bindMediaToggle( link );
+                        }
+                    }
+                };
+
+                // if unsupported, run the polyfill
+                if( !rp.support() ){
+                    // run once at least
+                    rp.poly();
+
+                    // rerun poly on an interval until onload
+                    var run = w.setInterval( rp.poly, 500 );
+                    if( w.addEventListener ){
+                        w.addEventListener( "load", function(){
+                            rp.poly();
+                            w.clearInterval( run );
+                        } );
+                    } else if( w.attachEvent ){
+                        w.attachEvent( "onload", function(){
+                            rp.poly();
+                            w.clearInterval( run );
+                        } );
+                    }
+                }
+
+
+                // commonjs
+                if( typeof exports !== "undefined" ){
+                    exports.loadCSS = loadCSS;
+                }
+                else {
+                    w.loadCSS = loadCSS;
+                }
+            }( typeof global !== "undefined" ? global : this ) );
+        </script>
+        <script></script>
     </head>
     <body>
+        <script async defer>
+
+            function submitToAPI(e) {
+            e.preventDefault();
+            var URL = "https://abc1234.execute-api.us-east-1.amazonaws.com/01/contact";
+
+                    var Namere = /[A-Za-z]{1}[A-Za-z]/;
+                    if (!Namere.test($("#name-input").val())) {
+                                alert ("Name can not less than 2 char");
+                        return;
+                    }
+                    if ($("#email-input").val()=="") {
+                        alert ("Please enter your email id");
+                        return;
+                    }
+
+                    var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+                    if (!reeamil.test($("#email-input").val())) {
+                        alert ("Please enter valid email address");
+                        return;
+                    }
+
+            var name = $("#name-input").val();
+            var email = $("#email-input").val();
+            var description = $("#description-input").val();
+            var data = {
+                name : name,
+                email : email,
+                description : description
+                };
+
+            $.ajax({
+                type: "POST",
+                url : "https://bpiipnuxsj.execute-api.eu-west-1.amazonaws.com/v1/contact",
+                dataType: "json",
+                crossDomain: "true",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(data),
+
+                
+                success: function () {
+                // clear form and show a success message
+                alert("Successfull");
+                document.getElementById("contact-form").reset();
+            location.reload();
+                },
+                error: function () {
+                // show an error message
+                alert("UnSuccessfull");
+                }});
+            }
+        </script>
         <div class="flex-center">
             <div class="flex-container">
                 <div class="flex-item small flex-parent-column header gray center">
@@ -39,6 +205,15 @@
                         <a href="https://www.youracclaim.com/badges/35e15e9e-8acf-4811-9b0e-b931a40b5cfb/public_url" class="flex-item-row" target="blank"><div class="flex-item-row ocm cert"></div></a>
                         <div class="flex-item-row jcp cert"></div>
                         <div class="flex-item-row jcd cert"></div>
+                </div>
+                <div class="flex-item flex-parent-column gray">
+                        <form class="flex-parent-column form" id="contact-form" method="post" action="">
+                                <div class="flex-item form-field">Write me a line:</div>
+                                <input class="flex-item form-field" type="text" id="name-input" name="name" placeholder="  name"   />
+                                <input class="flex-item form-field" type="email" id="email-input" name="email" placeholder="  email" />
+                                <textarea class="flex-item form-field" id="description-input" name="description" rows="3" placeholder=" message"></textarea>
+                                <button  id="submit" class="flex-item form-field" onClick="submitToAPI(event)">Submit</button>
+                          </form>
                 </div>
                 <div class="flex-item small flex-parent no-wrap gray bottom-margin">
                     <a href="https://github.com/zenix" class="flex-item-row no-wrap" target="blank"><div class="github link"></div></a>
