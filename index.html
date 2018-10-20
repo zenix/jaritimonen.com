@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <head>
-    <script
-    async
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27145617-1"></script>
     <script>
@@ -135,60 +130,11 @@
             }( typeof global !== "undefined" ? global : this ) );
         </script>
         <script></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+        <script defer src="vue-app.js"></script>
     </head>
     <body>
-        <script async defer>
-
-            function submitToAPI(e) {
-            e.preventDefault();
-            var URL = "https://abc1234.execute-api.us-east-1.amazonaws.com/01/contact";
-
-                    var Namere = /[A-Za-z]{1}[A-Za-z]/;
-                    if (!Namere.test($("#name-input").val())) {
-                                alert ("Name can not less than 2 char");
-                        return;
-                    }
-                    if ($("#email-input").val()=="") {
-                        alert ("Please enter your email id");
-                        return;
-                    }
-
-                    var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
-                    if (!reeamil.test($("#email-input").val())) {
-                        alert ("Please enter valid email address");
-                        return;
-                    }
-
-            var name = $("#name-input").val();
-            var email = $("#email-input").val();
-            var description = $("#description-input").val();
-            var data = {
-                name : name,
-                email : email,
-                description : description
-                };
-
-            $.ajax({
-                type: "POST",
-                url : "https://bpiipnuxsj.execute-api.eu-west-1.amazonaws.com/v1/contact",
-                dataType: "json",
-                crossDomain: "true",
-                contentType: "application/json; charset=utf-8",
-                data: JSON.stringify(data),
-
-                
-                success: function () {
-                // clear form and show a success message
-                alert("Successfull");
-                document.getElementById("contact-form").reset();
-            location.reload();
-                },
-                error: function () {
-                // show an error message
-                alert("UnSuccessfull");
-                }});
-            }
-        </script>
+       
         <div class="flex-center">
             <div class="flex-container">
                 <div class="flex-item small flex-parent-column header gray center">
@@ -206,14 +152,23 @@
                         <div class="flex-item-row jcp cert"></div>
                         <div class="flex-item-row jcd cert"></div>
                 </div>
-                <div class="flex-item flex-parent-column gray">
-                        <form class="flex-parent-column form" id="contact-form" method="post" action="">
+                <div id="vue-app" class="flex-item flex-parent-column gray">
+                        <form class="flex-parent-column form" v-on:submit.prevent="submitContact">
+                                <div class="green" v-if="ok">
+                                    Thank you. I'll be in touch.
+                                </div>
+                                <div v-if="errors.length">
+                                    <div>Sorry, but there are some errors :(</div>
+                                    <ul>
+                                        <li class="error" v-for="error in errors">{{ error }}</li>
+                                    </ul>
+                                </div>
                                 <div class="flex-item form-field">Write me a line:</div>
-                                <input class="flex-item form-field" type="text" id="name-input" name="name" placeholder="  name"   />
-                                <input class="flex-item form-field" type="email" id="email-input" name="email" placeholder="  email" />
-                                <textarea class="flex-item form-field" id="description-input" name="description" rows="3" placeholder=" message"></textarea>
-                                <button  id="submit" class="flex-item form-field" onClick="submitToAPI(event)">Submit</button>
-                          </form>
+                                <input v-model="name" class="flex-item form-field" type="text" id="name-input" name="name" placeholder="  name"   />
+                                <input v-model="email" class="flex-item form-field" type="email" id="email-input" name="email" placeholder="  email" />
+                                <textarea v-model="description" class="flex-item form-field" id="description-input" name="description" rows="3" placeholder=" message"></textarea>
+                                <button id="submit" class="flex-item form-field">Submit</button>
+                        </form>
                 </div>
                 <div class="flex-item small flex-parent no-wrap gray bottom-margin">
                     <a href="https://github.com/zenix" class="flex-item-row no-wrap" target="blank"><div class="github link"></div></a>
