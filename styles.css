@@ -68,7 +68,7 @@ body {
 
 
 @media (max-width: 800px) {
-   
+
     .face {
         background-size: cover;
         max-height: 100%;
@@ -107,10 +107,12 @@ body {
 .name {
     margin: 0.1em;
     font-weight: bold;
+    font-size: xx-large;
 }
 
 .job-title {
     margin: 0.1em;
+    font-size: larger;
 }
 
 .face {
@@ -118,7 +120,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 60%;
-    max-height: 7%;
+    max-height: 25%;
 }
 
 .aws-arch {
@@ -127,6 +129,21 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+.aws-dev {
+    background-image: url("static/AWS-Assoc-Dev-Cert.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.aws-bigdata {
+    background-image: url("static/AWS-BigData-Cert.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 
 .jcp {
     background-image: url("static/java_cert_prog.gif");
@@ -169,47 +186,4 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-}
-
-.form {
-    width: 60%;
-}
-.form-field {
-    width: 100%;
-}
-
-input, textarea{
-    border: 1px dotted #999;
-    border-radius: 0;
-    -webkit-appearance: none;
-}
-
-button, input, textarea {
-    font-family : inherit;
-    font-size   : 100%;
-}
-
-#submit {
-background-color: #bbb;
-  padding: .5em;
-  -moz-border-radius: 1px;
-  -webkit-border-radius: 1px;
-  border-radius: 1px;
-  color: #fff;
-  text-decoration: none;
-  border: none;
-}
-
-#submit:hover {
-    border: none;
-    background: orange;
-    box-shadow: 0px 0px 1px #777;
-}
-
-.error {
-    color: red;
-}
-
-.green {
-    color: green;
 }

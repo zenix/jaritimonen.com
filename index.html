@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
         <link rel="stylesheet" href="styles.css">
     </noscript>
-    
+
     <script>
            /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
             /* This file is meant as a standalone workflow for
@@ -130,11 +130,10 @@
             }( typeof global !== "undefined" ? global : this ) );
         </script>
         <script></script>
-        <script defer src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
-        <script defer src="vue-app.js"></script>
+
     </head>
     <body>
-       
+
         <div class="flex-center">
             <div class="flex-container">
                 <div class="flex-item small flex-parent-column header gray center">
@@ -142,33 +141,19 @@
                         Jari Timonen
                     </div>
                     <div class="job-title flex-item-row no-wrap">
-                        Hands-on Software Architect and Cloud Architect
+                        Software Architect | Cloud Architect | Architecture Lead
                     </div>
                 </div>
                 <div class="flex-item face gray"></div>
                 <div class="flex-item flex-parent gray">
                         <a href="https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2016-10-06&ci=AWS00214770" class="flex-item-row" target="blank"><div class="aws-arch cert"></div></a>
-                        <a href="https://www.youracclaim.com/badges/35e15e9e-8acf-4811-9b0e-b931a40b5cfb/public_url" class="flex-item-row" target="blank"><div class="flex-item-row ocm cert"></div></a>
-                        <div class="flex-item-row jcp cert"></div>
-                        <div class="flex-item-row jcd cert"></div>
+                        <a href="https://www.certmetrics.com/amazon/public/badge.aspx?i=2&t=c&d=2018-11-21&ci=AWS00214770" class="flex-item-row" target="blank"><div class="aws-dev cert"></div></a>
+                        <a href="https://www.certmetrics.com/amazon/public/badge.aspx?i=8&t=c&d=2019-01-29&ci=AWS00214770" class="flex-item-row" target="blank"><div class="aws-bigdata cert"></div></a>
                 </div>
-                <div id="vue-app" class="flex-item flex-parent-column gray">
-                        <form class="flex-parent-column form" v-on:submit.prevent="submitContact">
-                                <div class="green" v-if="ok">
-                                    Thank you. I'll be in touch.
-                                </div>
-                                <div v-if="errors.length">
-                                    <div>Sorry, but there are some errors :(</div>
-                                    <ul>
-                                        <li class="error" v-for="error in errors">{{ error }}</li>
-                                    </ul>
-                                </div>
-                                <div class="flex-item form-field">Write me a line:</div>
-                                <input v-model="name" class="flex-item form-field" type="text" id="name-input" name="name" placeholder="  name"   />
-                                <input v-model="email" class="flex-item form-field" type="email" id="email-input" name="email" placeholder="  email" />
-                                <textarea v-model="description" class="flex-item form-field" id="description-input" name="description" rows="3" placeholder=" message"></textarea>
-                                <button id="submit" class="flex-item form-field">Submit</button>
-                        </form>
+                <div class="flex-item flex-parent gray">
+                    <a href="https://www.youracclaim.com/badges/35e15e9e-8acf-4811-9b0e-b931a40b5cfb/public_url" class="flex-item-row" target="blank"><div class="flex-item-row ocm cert"></div></a>
+                    <div class="flex-item-row jcd cert"></div>
+                    <div class="flex-item-row jcp cert"></div>
                 </div>
                 <div class="flex-item small flex-parent no-wrap gray bottom-margin">
                     <a href="https://github.com/zenix" class="flex-item-row no-wrap" target="blank"><div class="github link"></div></a>
