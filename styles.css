@@ -123,6 +123,13 @@ body {
     max-height: 25%;
 }
 
+.aws-arch-pro {
+    background-image: url("static/AWS-SolArchitect-Professional-2020.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 .aws-arch {
     background-image: url("static/AWS-Assoc-Cert.png");
     background-position: center;
