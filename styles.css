@@ -144,8 +144,8 @@ body {
     background-size: contain;
 }
 
-.aws-bigdata {
-    background-image: url("static/AWS-BigData-Cert.png");
+.gcp-arch-pro {
+    background-image: url("static/GCP-Arch-Pro.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
