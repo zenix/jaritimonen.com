@@ -124,28 +124,35 @@ body {
 }
 
 .aws-arch-pro {
-    background-image: url("static/AWS-SolArchitect-Professional-2020.png");
+    background-image: url("static/AWS-SolArchitect-Professional-2020-a.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .aws-arch {
-    background-image: url("static/AWS-Assoc-Cert.png");
+    background-image: url("static/AWS-Assoc-Cert-a.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .aws-dev {
-    background-image: url("static/AWS-Assoc-Dev-Cert.png");
+    background-image: url("static/AWS-Assoc-Dev-Cert-a.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .gcp-arch-pro {
-    background-image: url("static/GCP-Arch-Pro.png");
+    background-image: url("static/GCP-Arch-Pro-a.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.gcp-dev-pro {
+    background-image: url("static/GCP-Dev-Pro-a.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
