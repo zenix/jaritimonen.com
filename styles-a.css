@@ -158,6 +158,12 @@ body {
     background-size: contain;
 }
 
+.gcp-data-pro {
+    background-image: url("static/GCPDataEngineer.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 
 .jcp {
     background-image: url("static/java_cert_prog.gif");
