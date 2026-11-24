@@ -1,171 +1,355 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27145617-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jari Timonen · Cloud, IoT and AI Architect</title>
+<meta name="description" content="Lead Cloud Architect at Codento and Google Developer Expert for Google Cloud. Cloud architecture, industrial IoT and multi-agent AI. Pirkkala, Finland.">
+<link rel="canonical" href="https://jaritimonen.com/">
+<meta name="author" content="Jari Timonen">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="generator" content="Claude by Anthropic (AI-generated site)">
+<meta name="theme-color" content="#050D09">
+<meta name="color-scheme" content="dark">
 
-        gtag('config', 'UA-27145617-1');
-    </script>
+<link rel="preload" href="/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<noscript><style>.readout[hidden]{display:flex;margin-top:12px}</style></noscript>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Jari Timonen, Software Architect and Cloud Architect</title>
-    <meta name="description" content="Hands-on Software Architect and Cloud Architect with coaching and team leadership skills.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Karla"  as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="styles-a.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
-        <link rel="stylesheet" href="styles-a.css">
-    </noscript>
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Jari Timonen">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://jaritimonen.com/">
+<meta property="og:title" content="Jari Timonen · Cloud, IoT and AI Architect">
+<meta property="og:description" content="Lead Cloud Architect at Codento and Google Developer Expert for Google Cloud. Cloud architecture, industrial IoT and multi-agent AI.">
+<meta property="og:image" content="https://jaritimonen.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Jari Timonen, Cloud, IoT and AI architect, with a green radar display">
+<meta property="profile:first_name" content="Jari">
+<meta property="profile:last_name" content="Timonen">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@jtimonen">
+<meta name="twitter:title" content="Jari Timonen · Cloud, IoT and AI Architect">
+<meta name="twitter:description" content="Lead Cloud Architect at Codento and Google Developer Expert for Google Cloud. Cloud architecture, industrial IoT and multi-agent AI.">
+<meta name="twitter:image" content="https://jaritimonen.com/og-image.png">
 
-    <script>
-           /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
-            /* This file is meant as a standalone workflow for
-            - testing support for link[rel=preload]
-            - enabling async CSS loading in browsers that do not support rel=preload
-            - applying rel preload css once loaded, whether supported or not.
-            */
-            (function( w ){
-                "use strict";
-                // rel=preload support test
-                if( !w.loadCSS ){
-                    w.loadCSS = function(){};
-                }
-                // define on the loadCSS obj
-                var rp = loadCSS.relpreload = {};
-                // rel=preload feature support test
-                // runs once and returns a function for compat purposes
-                rp.support = (function(){
-                    var ret;
-                    try {
-                        ret = w.document.createElement( "link" ).relList.supports( "preload" );
-                    } catch (e) {
-                        ret = false;
-                    }
-                    return function(){
-                        return ret;
-                    };
-                })();
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://jaritimonen.com/#website",
+      "url": "https://jaritimonen.com/",
+      "name": "Jari Timonen",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://jaritimonen.com/#person" }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://jaritimonen.com/#profilepage",
+      "url": "https://jaritimonen.com/",
+      "name": "Jari Timonen · Cloud, IoT and AI Architect",
+      "inLanguage": "en",
+      "dateModified": "2026-11-24",
+      "isPartOf": { "@id": "https://jaritimonen.com/#website" },
+      "mainEntity": { "@id": "https://jaritimonen.com/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://jaritimonen.com/#person",
+      "name": "Jari Timonen",
+      "givenName": "Jari",
+      "familyName": "Timonen",
+      "url": "https://jaritimonen.com/",
+      "email": "mailto:jari.timonen@gmail.com",
+      "jobTitle": "Lead Cloud Architect",
+      "image": { "@type": "ImageObject", "url": "https://jaritimonen.com/jari-timonen.jpg", "width": 800, "height": 800 },
+      "description": "Cloud, IoT and AI architect. Lead Cloud Architect at Codento, Google Developer Expert for Google Cloud, former Chief Software Architect at Cargotec.",
+      "worksFor": { "@type": "Organization", "name": "Codento", "url": "https://codento.com/" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Pirkkala", "addressCountry": "FI" },
+      "knowsLanguage": ["fi", "en", "sv"],
+      "knowsAbout": ["Cloud architecture", "Google Cloud", "Amazon Web Services", "Microsoft Azure", "Industrial IoT", "Agentic AI", "Multi-agent systems", "Vertex AI", "LangGraph", "Software architecture", "Data engineering", "Technical leadership"],
+      "award": ["Google Developer Expert, Google Cloud", "Google Cloud Champion Innovator, Hybrid Multi-Cloud"],
+      "sameAs": ["https://www.linkedin.com/in/jaritimonen", "https://github.com/zenix", "https://twitter.com/jtimonen", "https://g.dev/jtimonen"],
+      "hasCredential": [
+        { "@type": "EducationalOccupationalCredential", "name": "Google Cloud Professional Cloud Architect", "credentialCategory": "certification", "recognizedBy": { "@type": "Organization", "name": "Google Cloud" }, "url": "https://www.credly.com/badges/48ced558-3942-405c-a8fb-daf3a043ef87/public_url" },
+        { "@type": "EducationalOccupationalCredential", "name": "Google Cloud Professional Cloud Developer", "credentialCategory": "certification", "recognizedBy": { "@type": "Organization", "name": "Google Cloud" }, "url": "https://www.credly.com/badges/ee74650e-05d5-4f44-b733-c912e526d4e7/public_url" },
+        { "@type": "EducationalOccupationalCredential", "name": "Google Cloud Professional Data Engineer", "credentialCategory": "certification", "recognizedBy": { "@type": "Organization", "name": "Google Cloud" }, "url": "https://www.credly.com/badges/792e28a4-e32e-4974-aac8-a16ad6cc39be/public_url" },
+        { "@type": "EducationalOccupationalCredential", "name": "AWS Certified Solutions Architect – Professional", "credentialCategory": "certification", "recognizedBy": { "@type": "Organization", "name": "Amazon Web Services" }, "url": "https://www.credly.com/badges/b5d2b058-1f2f-4f74-bbda-c990407fd5b9" },
+        { "@type": "EducationalOccupationalCredential", "name": "AWS Certified Solutions Architect – Associate", "credentialCategory": "certification", "recognizedBy": { "@type": "Organization", "name": "Amazon Web Services" }, "url": "https://www.credly.com/badges/5919b0c7-0ff3-4419-a3c0-486097d97653" },
+        { "@type": "EducationalOccupationalCredential", "name": "AWS Certified Developer – Associate", "credentialCategory": "certification", "recognizedBy": { "@type": "Organization", "name": "Amazon Web Services" }, "url": "https://www.credly.com/badges/4fe80e5d-3606-4a00-8189-ac776be7e81c" },
+        { "@type": "EducationalOccupationalCredential", "name": "Oracle Certified Master, Java EE 5 Enterprise Architect", "credentialCategory": "certification", "recognizedBy": { "@type": "Organization", "name": "Oracle" }, "url": "https://www.youracclaim.com/badges/35e15e9e-8acf-4811-9b0e-b931a40b5cfb/public_url" },
+        { "@type": "EducationalOccupationalCredential", "name": "Sun Certified Programmer for the Java 2 Platform, Standard Edition 5", "credentialCategory": "certification", "recognizedBy": { "@type": "Organization", "name": "Sun Microsystems" } },
+        { "@type": "EducationalOccupationalCredential", "name": "Sun Certified Developer for the Java 2 Platform", "credentialCategory": "certification", "recognizedBy": { "@type": "Organization", "name": "Sun Microsystems" } }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/assets/radar.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
 
-                // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
-                // then change that media back to its intended value on load
-                rp.bindMediaToggle = function( link ){
-                    // remember existing media attr for ultimate state, or default to 'all'
-                    var finalMedia = link.media || "all";
+<header>
+<nav class="nav" aria-label="Main">
+<a class="brand" href="/">Jari Timonen</a>
+<ul>
+<li><a href="#work">Work</a></li>
+<li><a href="#how">How I work</a></li>
+<li><a href="#lab">Lab</a></li>
+<li><a href="#now">Now</a></li>
+<li><a class="contact" href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
 
-                    function enableStylesheet(){
-                        link.media = finalMedia;
-                    }
+<main id="main">
 
-                    // bind load handlers to enable media
-                    if( link.addEventListener ){
-                        link.addEventListener( "load", enableStylesheet );
-                    } else if( link.attachEvent ){
-                        link.attachEvent( "onload", enableStylesheet );
-                    }
+<section class="hero" aria-labelledby="name">
+<div class="hero-text">
+<div class="who">
+<div class="avatar"><img src="/assets/img/jari-timonen-120.webp" srcset="/assets/img/jari-timonen-120.webp 1x, /assets/img/jari-timonen-240.webp 2x, /assets/img/jari-timonen-360.webp 3x" width="120" height="120" alt="Portrait of Jari Timonen" decoding="async"></div>
+<span class="place">Pirkkala, Finland</span>
+</div>
+<h1 id="name">Jari Timonen. Cloud, IoT and AI architect.</h1>
+<a class="badge" href="https://g.dev/jtimonen" rel="me noopener" target="_blank"><span class="dot" aria-hidden="true"></span><span>Google Developer Expert · Google&nbsp;Cloud&nbsp;<span aria-hidden="true">↗</span></span></a>
+<p class="lead">Lead Cloud Architect at Codento. Before that, Chief Software Architect at Cargotec and a member of its digital unit's leadership team. I design systems and then stay around while they get built.</p>
+<div class="ctas">
+<a class="btn btn-primary" href="mailto:jari.timonen@gmail.com">Email me</a>
+<a class="btn btn-ghost" href="https://www.linkedin.com/in/jaritimonen" rel="me noopener" target="_blank">LinkedIn</a>
+</div>
+<p class="hint">Tap a dot on the radar for details.</p>
+</div>
 
-                    // Set rel and non-applicable media type to start an async request
-                    // note: timeout allows this to happen async to let rendering continue in IE
-                    setTimeout(function(){
-                        link.rel = "stylesheet";
-                        link.media = "only x";
-                    });
-                    // also enable media after 3 seconds,
-                    // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
-                    setTimeout( enableStylesheet, 3000 );
-                };
+<div class="radar-col">
+<div class="radar" role="tablist" aria-label="Areas of work">
+<div class="scope" aria-hidden="true"><div class="r1"></div><div class="r2"></div><div class="vx"></div><div class="hz"></div><div class="sweep"></div></div>
+<button class="blip" role="tab" id="t-lead" aria-controls="p-lead" aria-selected="true" style="left:18%;top:30%;--d:3.36s"><span class="pip" aria-hidden="true"></span><span class="lab">Leadership</span></button>
+<button class="blip" role="tab" id="t-cloud" aria-controls="p-cloud" aria-selected="false" tabindex="-1" style="left:58%;top:22%;--d:0.18s"><span class="pip" aria-hidden="true"></span><span class="lab">Cloud</span></button>
+<button class="blip flip" role="tab" id="t-ai" aria-controls="p-ai" aria-selected="false" tabindex="-1" style="left:66%;top:60%;--d:1.36s"><span class="pip" aria-hidden="true"></span><span class="lab">AI agents</span></button>
+<button class="blip" role="tab" id="t-iot" aria-controls="p-iot" aria-selected="false" tabindex="-1" style="left:24%;top:70%;--d:2.58s"><span class="pip" aria-hidden="true"></span><span class="lab">IoT</span></button>
+</div>
+<div class="readouts">
+<div class="readout" role="tabpanel" id="p-lead" aria-labelledby="t-lead">
+<div class="top"><span>01 / 04 · Leadership</span><span>Since 2015</span></div>
+<h2>Technical leadership</h2>
+<ul>
+<li>Leadership team of a digital business unit at Cargotec</li>
+<li>Oversees the architecture of 2–4 client projects at a time at Codento</li>
+<li>Has coached delivery teams and trained architects since Gofore</li>
+</ul>
+<a class="more" href="#how">How I work →</a>
+</div>
+<div class="readout" role="tabpanel" id="p-cloud" aria-labelledby="t-cloud" hidden>
+<div class="top"><span>02 / 04 · Cloud</span><span>Last ten years</span></div>
+<h2>Cloud architecture</h2>
+<ul>
+<li>Google Developer Expert, Google Cloud</li>
+<li>Champion Innovator, Hybrid Multi-Cloud</li>
+<li>Designs on GCP, Azure or AWS, depending on what the client already runs</li>
+</ul>
+<a class="more" href="#work">Selected work →</a>
+</div>
+<div class="readout" role="tabpanel" id="p-ai" aria-labelledby="t-ai" hidden>
+<div class="top"><span>03 / 04 · AI agents</span><span>Current focus</span></div>
+<h2>Agentic AI</h2>
+<ul>
+<li>Agentic AI for network operations at Codento</li>
+<li>Cost modelled from production token data</li>
+<li>Own builds: Vahti and Suvanto</li>
+</ul>
+<a class="more" href="#work">Selected work →</a>
+</div>
+<div class="readout" role="tabpanel" id="p-iot" aria-labelledby="t-iot" hidden>
+<div class="top"><span>04 / 04 · IoT</span><span>Since 2019</span></div>
+<h2>Industrial IoT</h2>
+<ul>
+<li>Chief Software Architect for an IoT platform built by 30 developers</li>
+<li>Designed Fastems Factory Cockpit, technical lead for 6 developers</li>
+<li>Own hardware: Solmu, a secure IoT gateway board</li>
+</ul>
+<a class="more" href="#work">Selected work →</a>
+</div>
+</div>
+</div>
+</section>
 
-                // loop through link elements in DOM
-                rp.poly = function(){
-                    // double check this to prevent external calls from running
-                    if( rp.support() ){
-                        return;
-                    }
-                    var links = w.document.getElementsByTagName( "link" );
-                    for( var i = 0; i < links.length; i++ ){
-                        var link = links[ i ];
-                        // qualify links to those with rel=preload and as=style attrs
-                        if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
-                            // prevent rerunning on link
-                            link.setAttribute( "data-loadcss", true );
-                            // bind listeners to toggle media back
-                            rp.bindMediaToggle( link );
-                        }
-                    }
-                };
+<ul class="proof" aria-label="Credentials">
+<li><b>Google Developer Expert</b><span>Google Cloud · current</span></li>
+<li><b>Champion Innovator</b><span>Hybrid Multi-Cloud</span></li>
+<li><b>25 years in software</b><span>Since 2001</span></li>
+<li><b>GCP, AWS, Azure</b><span>In production</span></li>
+</ul>
 
-                // if unsupported, run the polyfill
-                if( !rp.support() ){
-                    // run once at least
-                    rp.poly();
+<section class="section first" aria-labelledby="h-focus">
+<h2 class="h2" id="h-focus"><span class="n">01</span>What I work on</h2>
+<div class="grid g300">
+<div class="card"><h3>Architecture direction</h3><p>Setting technical direction across 2–4 client projects at a time, and owning the platform standards engineers build to.</p></div>
+<div class="card"><h3>Agentic AI in production</h3><p>Moving multi-agent systems from prototype into production, where the hard parts are reliability, cost control and the handover to the team that runs them.</p></div>
+<div class="card"><h3>Industrial IoT and data</h3><p>Connecting equipment on the factory floor to cloud services, and moving large data volumes in for analytics and BI.</p></div>
+</div>
+</section>
 
-                    // rerun poly on an interval until onload
-                    var run = w.setInterval( rp.poly, 500 );
-                    if( w.addEventListener ){
-                        w.addEventListener( "load", function(){
-                            rp.poly();
-                            w.clearInterval( run );
-                        } );
-                    } else if( w.attachEvent ){
-                        w.attachEvent( "onload", function(){
-                            rp.poly();
-                            w.clearInterval( run );
-                        } );
-                    }
-                }
+<section class="section" id="work" aria-labelledby="h-work">
+<h2 class="h2" id="h-work"><span class="n">02</span>Selected work</h2>
+
+<article class="case">
+<div class="side">
+<span class="code">01 · 2019–2021</span>
+<h3>Industrial IoT platform</h3>
+<span class="meta">Chief Software Architect · AWS, with Google Cloud for BI</span>
+</div>
+<dl>
+<dt>Context</dt><dd>Group-wide IoT platform on AWS, built by 30 developers and connecting heavy equipment across several business units.</dd>
+<dt>My role</dt><dd>Owned the architecture and technology selection. Member of the digital unit's leadership team, taking part in roadmap and investment decisions.</dd>
+<dt>Hard part</dt><dd>Getting separate business units onto shared infrastructure. This took the longest, and most of it was organisational work.</dd>
+</dl>
+</article>
+
+<article class="case">
+<div class="side">
+<span class="code">02 · Codento · Fastems</span>
+<h3>Fastems Factory Cockpit</h3>
+<span class="meta">Architect and technical lead · Azure</span>
+</div>
+<dl>
+<dt>Context</dt><dd>Platform connecting CNC automation on the factory floor to cloud services.</dd>
+<dt>My role</dt><dd>Designed the architecture from scratch and was technical lead for the implementation team of 6 developers.</dd>
+<dt>Hands-on</dt><dd>Built the CI/CD pipelines, the DevOps setup and the data processing myself.</dd>
+</dl>
+</article>
+
+<article class="case">
+<div class="side">
+<span class="code">03 · Codento · Telecom</span>
+<h3>Agentic AI for network operations</h3>
+<span class="meta">Architect · Vertex AI, Gemini</span>
+</div>
+<dl>
+<dt>Context</dt><dd>Multi-agent system on Vertex AI Agent Engine that triages network alarms for a telecom vendor.</dd>
+<dt>My role</dt><dd>Architecture lead for the agent platform.</dd>
+<dt>Hard part</dt><dd>Predictable agent behaviour and a known running cost. I built the cost model from two weeks of production token data.</dd>
+</dl>
+</article>
+</section>
+
+<section class="section" id="how" aria-labelledby="h-how">
+<h2 class="h2" id="h-how"><span class="n">03</span>How I work</h2>
+<ul class="how">
+<li><h3>Cost</h3><p>I pick the cheapest setup that holds up and follow the cloud vendors’ best practices. My own systems, Vahti and Suvanto, run on Cloud Run with SQLite kept in Cloud Storage instead of a managed database.</p></li>
+<li><h3>Security</h3><p>I spent five years building systems for banks. Authentication, data protection and audit requirements still shape my designs from the first day.</p></li>
+<li><h3>Complexity</h3><p>I’ve always worked on large, complex systems, such as telecom order management where the product catalogue, provisioning and billing all had to agree. I plan for that kind of complexity early.</p></li>
+<li><h3>Coaching</h3><p>I started coaching delivery teams and training architects at Gofore, and I still do it.</p></li>
+</ul>
+</section>
+
+<section class="section" id="lab" aria-labelledby="h-lab">
+<div class="head-row">
+<h2 class="h2" id="h-lab"><span class="n">04</span>Lab</h2>
+<p class="sub">Things I build in my own time.</p>
+</div>
+<div class="grid g380">
+<article class="card lab">
+<img class="shot" src="/lab/ohmlens/ohmlens-circuit-800.webp" srcset="/lab/ohmlens/ohmlens-circuit-800.webp 800w, /lab/ohmlens/ohmlens-circuit-1200.webp 1200w" sizes="(min-width: 840px) 560px, calc(100vw - 40px)" width="800" height="400" alt="OhmLens lesson: a 9 V battery, 1 kΩ resistor and LED circuit showing 7.2 mA of current and 52 mW of heat in the resistor, with a slider to change the resistance" loading="lazy" decoding="async">
+<div class="tags"><span>Web</span><span>● Live</span></div>
+<h3>OhmLens</h3>
+<p>Free electronics course in the browser, built on live circuit simulations. 22 lessons from volts to PCB design.</p>
+<div class="links"><a href="/lab/ohmlens/">Read more →</a><a href="https://ohmlens.com/" rel="noopener" target="_blank">ohmlens.com ↗</a></div>
+</article>
+<article class="card lab">
+<img class="shot" src="/assets/img/solmu-pcb-800.webp" srcset="/assets/img/solmu-pcb-800.webp 800w, /assets/img/solmu-pcb-1200.webp 1200w" sizes="(min-width: 840px) 560px, calc(100vw - 40px)" width="800" height="400" alt="Solmu prototype board: a green PCB with an ESP32-C6 module, a flexible 2.4/5 GHz antenna on a cable, USB-C, a battery connector, a Qwiic port and reset and boot buttons" loading="lazy" decoding="async">
+<div class="tags"><span>Hardware</span><span>● Being open sourced</span></div>
+<h3>Solmu</h3>
+<p>Secure IoT gateway board I designed. ESP32-C6 with an ATECC608B secure element. KiCad board design, firmware and control portal.</p>
+</article>
+<article class="card lab">
+<div class="tags"><span>Software</span><span>● Built</span></div>
+<h3>Vahti</h3>
+<p>Multi-agent assistant for meeting prep, a tech radar and project tracking across tickets and code. Web and Slack, on Cloud Run.</p>
+</article>
+<article class="card lab">
+<div class="tags"><span>Software</span><span>● Built</span></div>
+<h3>Suvanto</h3>
+<p>Multi-agent stock market analysis built with LangGraph.</p>
+</article>
+</div>
+</section>
 
 
-                // commonjs
-                if( typeof exports !== "undefined" ){
-                    exports.loadCSS = loadCSS;
-                }
-                else {
-                    w.loadCSS = loadCSS;
-                }
-            }( typeof global !== "undefined" ? global : this ) );
-        </script>
-        <script></script>
+<section class="section" id="now" aria-labelledby="h-now">
+<div class="now">
+<div>
+<h2 class="h2" id="h-now"><span class="n">05</span>Now</h2>
+<p class="sub">Updated <time datetime="2026-11">November 2026</time></p>
+</div>
+<ul>
+<li>Agentic AI for network operations at Codento.</li>
+<li>Building OhmLens.</li>
+<li>Preparing Solmu, my IoT gateway board, for an open source release.</li>
+</ul>
+</div>
+</section>
 
-    </head>
-    <body>
+<section class="section two" aria-label="Certifications and career">
+<div class="list" id="certs">
+<h2 class="h2"><span class="n">06</span>Certifications</h2>
+<a class="cert" href="https://www.credly.com/badges/48ced558-3942-405c-a8fb-daf3a043ef87/public_url" rel="noopener" target="_blank"><b>Professional Cloud Architect</b><span>Google Cloud ↗</span></a>
+<a class="cert" href="https://www.credly.com/badges/ee74650e-05d5-4f44-b733-c912e526d4e7/public_url" rel="noopener" target="_blank"><b>Professional Cloud Developer</b><span>Google Cloud ↗</span></a>
+<a class="cert" href="https://www.credly.com/badges/792e28a4-e32e-4974-aac8-a16ad6cc39be/public_url" rel="noopener" target="_blank"><b>Professional Data Engineer</b><span>Google Cloud ↗</span></a>
+<a class="cert" href="https://www.credly.com/badges/b5d2b058-1f2f-4f74-bbda-c990407fd5b9" rel="noopener" target="_blank"><b>AWS Certified Solutions Architect – Professional</b><span>AWS ↗</span></a>
+<a class="cert" href="https://www.credly.com/badges/5919b0c7-0ff3-4419-a3c0-486097d97653" rel="noopener" target="_blank"><b>AWS Certified Solutions Architect – Associate</b><span>AWS ↗</span></a>
+<a class="cert" href="https://www.credly.com/badges/4fe80e5d-3606-4a00-8189-ac776be7e81c" rel="noopener" target="_blank"><b>AWS Certified Developer – Associate</b><span>AWS ↗</span></a>
+<div class="earlier">
+<span class="label">Earlier, Java</span>
+<a href="https://www.youracclaim.com/badges/35e15e9e-8acf-4811-9b0e-b931a40b5cfb/public_url" rel="noopener" target="_blank">Oracle Certified Master, Java EE 5 Enterprise Architect · Oracle ↗</a>
+<span>Sun Certified Programmer for the Java 2 Platform, Standard Edition 5 · Sun Microsystems</span>
+<span>Sun Certified Developer for the Java 2 Platform · Sun Microsystems</span>
+</div>
+</div>
+<div class="list">
+<h2 class="h2"><span class="n">07</span>Career</h2>
+<div class="job"><span class="y">2021–now</span><span class="r"><b>Codento</b> · <span>Lead Cloud Architect</span></span></div>
+<div class="job"><span class="y">2019–2021</span><span class="r"><b>Cargotec</b> · <span>Chief Software Architect</span></span></div>
+<div class="job"><span class="y">2015–2019</span><span class="r"><b>Gofore</b> · <span>Software Architect</span></span></div>
+<div class="job"><span class="y">2012–2015</span><span class="r"><b>Elisa</b> · <span>Service Architect</span></span></div>
+<div class="job"><span class="y">2009–2012</span><span class="r"><b>Elisa</b> · <span>Senior Software Engineer</span></span></div>
+<div class="job"><span class="y">2001–2009</span><span class="r"><b>Endero</b> · <span>Software Designer</span></span></div>
+<div class="job"><span class="y">Also</span><span class="r"><span>Technical reviewer, Packt Publishing</span></span></div>
+<div class="job"><span class="y">Also</span><span class="r"><span>Open source contributor, Drools Guvnor</span></span></div>
+<a class="cert" href="/jari-timonen-cv.pdf" type="application/pdf" rel="noopener" target="_blank"><b>CV</b><span>PDF, one page ↓</span></a>
+</div>
+</section>
 
-        <div class="flex-center">
-            <div class="flex-container">
-                <div class="flex-item small flex-parent-column header gray center">
-                    <div class="name flex-item-row no-wrap">
-                        Jari Timonen
-                    </div>
-                    <div class="job-title flex-item-row no-wrap">
-                        Cloud Architect | Software Architect | Software Developer
-                    </div>
-                </div>
-                <div class="flex-item face gray"></div>
-                 <div class="flex-item flex-parent gray">
-                        <a href="https://www.credly.com/badges/48ced558-3942-405c-a8fb-daf3a043ef87/public_url" class="flex-item-row" target="blank"><div class="gcp-arch-pro cert"></div></a>
-                        <a href="https://www.credly.com/badges/ee74650e-05d5-4f44-b733-c912e526d4e7/public_url" class="flex-item-row" target="blank"><div class="gcp-dev-pro cert"></div></a>
-                         <a href="https://www.credly.com/badges/792e28a4-e32e-4974-aac8-a16ad6cc39be/public_url" class="flex-item-row" target="blank"><div class="gcp-data-pro cert"></div></a>
-                </div>
-                <div class="flex-item flex-parent gray">
-                        <a href="https://www.credly.com/badges/b5d2b058-1f2f-4f74-bbda-c990407fd5b9" class="flex-item-row" target="blank"><div class="aws-arch-pro cert"></div></a>
-                        <a href="https://www.credly.com/badges/5919b0c7-0ff3-4419-a3c0-486097d97653" class="flex-item-row" target="blank"><div class="aws-arch cert"></div></a>
-                        <a href="https://www.credly.com/badges/4fe80e5d-3606-4a00-8189-ac776be7e81c" class="flex-item-row" target="blank"><div class="aws-dev cert"></div></a>
-                </div>
-                <div class="flex-item flex-parent gray">
-                    <a href="https://www.youracclaim.com/badges/35e15e9e-8acf-4811-9b0e-b931a40b5cfb/public_url" class="flex-item-row" target="blank"><div class="flex-item-row ocm cert"></div></a>
-                    <div class="flex-item-row jcd cert"></div>
-                    <div class="flex-item-row jcp cert"></div>
-                </div>
-                <div class="flex-item small flex-parent no-wrap gray bottom-margin">
-                    <a href="https://github.com/zenix" class="flex-item-row no-wrap" target="blank"><div class="github link"></div></a>
-                    <a href="https://www.linkedin.com/in/jaritimonen" class="flex-item-row no-wrap" target="blank"><div class="linkedin link"></div></a>
-                    <a href="https://twitter.com/jtimonen" class="flex-item-row no-wrap" target="blank"><div class="twitter link"></div></a>
-                </div>
-            </div>
-        </div>
-    </body>
+</main>
+
+<footer class="foot" id="contact">
+<div class="body">
+<h2>Contact</h2>
+<p class="sub">Email is the fastest way to reach me.</p>
+<div class="links">
+<a class="primary" href="mailto:jari.timonen@gmail.com">jari.timonen@gmail.com</a>
+<a href="https://www.linkedin.com/in/jaritimonen" rel="me noopener" target="_blank">LinkedIn</a>
+<a href="https://github.com/zenix" rel="me noopener" target="_blank">GitHub</a>
+<a href="https://twitter.com/jtimonen" rel="me noopener" target="_blank">Twitter</a>
+</div>
+<p class="meta">Pirkkala, Finland · Finnish, English, Swedish</p>
+<p class="ai"><b>AI-generated</b>This site was designed and built with AI (Claude by Anthropic), using my own CV, LinkedIn profile and project notes.</p>
+</div>
+<div class="mini" aria-hidden="true">
+<div class="r1"></div><div class="vx"></div><div class="hz"></div><div class="sweep"></div>
+<i style="left:18%;top:30%;animation-delay:3.36s"></i><i style="left:58%;top:22%;animation-delay:.18s"></i><i style="left:66%;top:60%;animation-delay:1.36s"></i><i style="left:24%;top:70%;animation-delay:2.58s"></i>
+</div>
+</footer>
+
+</div>
+</body>
 </html>
