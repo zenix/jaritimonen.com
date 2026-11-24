@@ -64,7 +64,7 @@ a.badge:hover{border-color:var(--accent);color:var(--accent)}
 .blip.flip{flex-direction:row-reverse;transform:translate(calc(-100% + 16px),-16px)}
 .blip .pip{position:relative;width:12px;height:12px;flex:0 0 auto}
 .blip .pip::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--accent);box-shadow:0 0 14px var(--accent);animation:blip 4s linear infinite;animation-delay:var(--d,0s)}
-.blip .pip::after{content:"";position:absolute;left:-9px;top:-9px;width:28px;height:28px;border:1px solid #B8FFD6;border-radius:50%;box-shadow:0 0 12px rgba(77,255,154,.7);opacity:0;transition:opacity .2s}
+.blip .pip::after{content:"";position:absolute;inset:-8px;border:1px solid #B8FFD6;border-radius:50%;box-shadow:0 0 12px rgba(77,255,154,.7);opacity:0;transition:opacity .2s}
 .blip[aria-selected="true"] .pip::after{opacity:1}
 .blip .lab{font-family:var(--mono);font-size:12px}
 .blip[aria-selected="true"] .lab,.blip:hover .lab{color:#fff}

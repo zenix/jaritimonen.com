@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solmu: secure IoT gateway board · Jari Timonen</title>
+<meta name="description" content="Solmu is a secure IoT gateway board by Jari Timonen: ESP32-C6 with an ATECC608B secure element, JSON-defined data pipelines, signed over-the-air updates and a web portal.">
+<link rel="canonical" href="https://jaritimonen.com/lab/solmu/">
+<meta name="author" content="Jari Timonen">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="generator" content="Claude by Anthropic (AI-generated site)">
+<meta name="theme-color" content="#050D09">
+<meta name="color-scheme" content="dark">
+
+<link rel="preload" href="/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Jari Timonen">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://jaritimonen.com/lab/solmu/">
+<meta property="og:title" content="Solmu: a secure IoT gateway board">
+<meta property="og:description" content="ESP32-C6 and a hardware secure element. Change sensors, filters or cloud with a JSON file, and update over the air without a recompile.">
+<meta property="og:image" content="https://jaritimonen.com/lab/solmu/og-solmu.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Solmu prototype board: a green PCB with an ESP32-C6 module, USB-C, a battery connector and a Qwiic port">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://jaritimonen.com/lab/solmu/og-solmu.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://jaritimonen.com/lab/solmu/#webpage",
+      "url": "https://jaritimonen.com/lab/solmu/",
+      "name": "Solmu: a secure IoT gateway board",
+      "inLanguage": "en",
+      "dateModified": "2026-11-24",
+      "isPartOf": { "@id": "https://jaritimonen.com/#website" },
+      "author": { "@id": "https://jaritimonen.com/#person" },
+      "about": { "@id": "https://jaritimonen.com/lab/solmu/#project" },
+      "primaryImageOfPage": { "@type": "ImageObject", "url": "https://jaritimonen.com/assets/img/solmu-pcb-1200.webp", "width": 1200, "height": 600 },
+      "breadcrumb": { "@id": "https://jaritimonen.com/lab/solmu/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://jaritimonen.com/lab/solmu/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Jari Timonen", "item": "https://jaritimonen.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Lab", "item": "https://jaritimonen.com/#lab" },
+        { "@type": "ListItem", "position": 3, "name": "Solmu", "item": "https://jaritimonen.com/lab/solmu/" }
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://jaritimonen.com/lab/solmu/#project",
+      "name": "Solmu",
+      "description": "A secure IoT gateway board built on an ESP32-C6 and an ATECC608B secure element, with JSON-defined data pipelines, signed over-the-air updates and a web configuration portal.",
+      "image": "https://jaritimonen.com/assets/img/solmu-pcb-1200.webp",
+      "inLanguage": "en",
+      "creator": { "@type": "Person", "@id": "https://jaritimonen.com/#person", "name": "Jari Timonen", "url": "https://jaritimonen.com/" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+
+<header>
+<nav class="nav" aria-label="Breadcrumb">
+<a class="brand" href="/">← Jari Timonen</a>
+<p class="crumbs"><a href="/#lab">Lab</a> / Solmu</p>
+</nav>
+</header>
+
+<main id="main">
+<section class="p-hero" aria-labelledby="title">
+<div style="display:flex;flex-direction:column;gap:22px">
+<span class="status">● Built · Hardware</span>
+<h1 id="title">Solmu</h1>
+</div>
+<div style="display:flex;flex-direction:column;gap:22px">
+<p>A secure IoT gateway board I designed. It connects sensors to the cloud, and you set up the whole data flow in a JSON file. Change a sensor, a filter or the cloud, and the board picks it up over the air without a recompile or a reboot.</p>
+</div>
+</section>
+
+<figure class="p-shot">
+<img src="/assets/img/solmu-pcb-1200.webp" srcset="/assets/img/solmu-pcb-800.webp 800w, /assets/img/solmu-pcb-1200.webp 1200w" sizes="(min-width: 1200px) 1136px, calc(100vw - 40px)" width="1200" height="600" alt="Solmu prototype board: a green PCB with an ESP32-C6 module, a flexible 2.4/5 GHz antenna on a cable, USB-C, a battery connector, a Qwiic port and reset and boot buttons" decoding="async" fetchpriority="high">
+<figcaption>The prototype board. ESP32-C6 module, USB-C, battery connector and a Qwiic port for the secure element and sensors.</figcaption>
+</figure>
+<section class="why" aria-labelledby="why">
+<h2 id="why">Why I built it</h2>
+<p>Connecting a sensor to a cloud shouldn’t mean rebuilding firmware every time something changes. And security shouldn’t be something you add later.</p>
+</section>
+
+<div class="p-body">
+<section class="main" aria-labelledby="what">
+<h2 id="what">What it does</h2>
+<div class="mod"><span class="n">Pipelines</span><b>Data flow as configuration</b><span>Sensor inputs, filters, transforms and cloud outputs, all chosen in JSON and hot-reloaded</span></div>
+<div class="mod"><span class="n">Security</span><b>Hardware-backed from day one</b><span>An ATECC608B secure element signs payloads, encrypts credentials and authenticates devices</span></div>
+<div class="mod"><span class="n">Updates</span><b>Three signed OTA channels</b><span>Firmware with automatic rollback, configuration, and machine learning models</span></div>
+<div class="mod"><span class="n">Edge ML</span><b>Classify on the device</b><span>TensorFlow Lite Micro runs as a pipeline stage, so time-critical decisions skip the cloud</span></div>
+<div class="mod"><span class="n">Clouds</span><b>No vendor lock-in</b><span>AWS IoT Core, Azure IoT Hub, GCP or any MQTT or HTTPS endpoint. Switch by editing config</span></div>
+<div class="mod"><span class="n">Portal</span><b>Design in the browser</b><span>A web app to build pipelines, manage devices and deploy to them over the air</span></div>
+</section>
+<dl class="facts" aria-label="Facts">
+<div><dt>Role</dt><dd>Hardware, firmware and portal</dd></div>
+<div><dt>Hardware</dt><dd>ESP32-C6 and ATECC608B, board designed in KiCad</dd></div>
+<div><dt>Firmware</dt><dd>C on ESP-IDF and FreeRTOS</dd></div>
+<div><dt>Portal</dt><dd>Next.js, FastAPI and PostgreSQL</dd></div>
+<div><dt>Status</dt><dd>Prototype board built and running</dd></div>
+</dl>
+</div>
+</main>
+
+<footer class="foot">
+<div class="body">
+<p class="sub"><a href="/">← Back to Jari Timonen</a> · Preferred contact: <a href="https://www.linkedin.com/in/jaritimonen" rel="me noopener" target="_blank">LinkedIn InMail</a> · or <a href="mailto:jari.timonen@gmail.com">jari.timonen@gmail.com</a></p>
+<p class="ai"><b>AI-generated</b>This site was designed and built with AI (Claude by Anthropic), using my own CV, LinkedIn profile and project notes.</p>
+</div>
+</footer>
+
+</div>
+</body>
+</html>
