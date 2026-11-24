@@ -39,6 +39,8 @@ ul{padding:0;list-style:none}
 .place{font-family:var(--mono);font-size:13px;color:var(--dim)}
 h1{font-size:clamp(40px,5.4vw,72px);line-height:1.02;letter-spacing:-.03em;font-weight:600}
 .badge{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 16px;border:1px solid var(--hover);background:var(--panel);font-family:var(--mono);font-size:13px;color:var(--ink);text-decoration:none}
+a.badge{padding-block:8px;line-height:1.5}
+a.badge:hover{border-color:var(--accent);color:var(--accent)}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent);flex:0 0 auto}
 .lead{font-size:19px;line-height:1.6;color:var(--muted);max-width:560px}
 .ctas{display:flex;flex-wrap:wrap;gap:12px}
