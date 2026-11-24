@@ -59,6 +59,7 @@ h1{font-size:clamp(40px,5.4vw,72px);line-height:1.02;letter-spacing:-.03em;font-
 @keyframes sweep{to{transform:rotate(360deg)}}
 @keyframes blip{0%{opacity:1;transform:scale(1.35)}25%{opacity:.7;transform:scale(1)}100%{opacity:.35;transform:scale(1)}}
 .blip{position:absolute;transform:translate(-16px,-16px);display:flex;white-space:nowrap;align-items:center;gap:8px;padding:10px;min-height:44px;background:transparent;border:0;color:#B8FFD6;font:inherit;cursor:pointer}
+.blip.flip{flex-direction:row-reverse;transform:translate(calc(-100% + 16px),-16px)}
 .blip .pip{position:relative;width:12px;height:12px;flex:0 0 auto}
 .blip .pip::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--accent);box-shadow:0 0 14px var(--accent);animation:blip 4s linear infinite;animation-delay:var(--d,0s)}
 .blip .pip::after{content:"";position:absolute;left:-9px;top:-9px;width:28px;height:28px;border:1px solid #B8FFD6;border-radius:50%;box-shadow:0 0 12px rgba(77,255,154,.7);opacity:0;transition:opacity .2s}
@@ -120,6 +121,7 @@ h1{font-size:clamp(40px,5.4vw,72px);line-height:1.02;letter-spacing:-.03em;font-
 .lab .tags span+span{color:var(--accent)}
 .lab h3{font-size:28px;letter-spacing:-.02em}
 .lab p{font-size:16px}
+.lab .shot{display:block;width:calc(100% + 56px);max-width:none;height:auto;margin:-28px -28px 8px;border-bottom:1px solid var(--line2);background:#0D111B}
 .lab .links{display:flex;flex-wrap:wrap;gap:24px;font-family:var(--mono);font-size:13px}
 
 /* now */
@@ -172,6 +174,9 @@ a.cert:hover b{color:#fff}
 .mod .n{font-family:var(--mono);font-size:13px;color:var(--accent);min-width:90px}
 .mod b{font-size:18px;font-weight:600;flex:1 1 240px}
 .mod span:last-child{font-size:15px;color:var(--muted);flex:1 1 240px}
+.p-shot{margin:0 0 48px}
+.p-shot img{display:block;width:100%;height:auto;border:1px solid var(--line2);background:#0D111B}
+.p-shot figcaption{margin-top:12px;font-size:14px;color:var(--dim)}
 .facts{flex:1 1 260px;align-self:flex-start;border:1px solid var(--line2)}
 .facts div{display:flex;flex-direction:column;gap:4px;padding:18px 20px;border-bottom:1px solid var(--line)}
 .facts div:last-child{border-bottom:0}

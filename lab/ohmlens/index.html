@@ -26,13 +26,13 @@
 <meta property="og:url" content="https://jaritimonen.com/lab/ohmlens/">
 <meta property="og:title" content="OhmLens: a free electronics course with live circuit simulations">
 <meta property="og:description" content="22 lessons in seven modules, from volts to PCB design. Every lesson is a live circuit you can change.">
-<meta property="og:image" content="https://jaritimonen.com/og-image.png">
+<meta property="og:image" content="https://jaritimonen.com/lab/ohmlens/og-ohmlens.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Jari Timonen, Cloud, IoT and AI architect, with a green radar display">
+<meta property="og:image:alt" content="An OhmLens lesson with a live LED circuit, current and heat readings, and a slider">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@jtimonen">
-<meta name="twitter:image" content="https://jaritimonen.com/og-image.png">
+<meta name="twitter:image" content="https://jaritimonen.com/lab/ohmlens/og-ohmlens.jpg">
 
 <script type="application/ld+json">
 {
@@ -48,6 +48,7 @@
       "isPartOf": { "@id": "https://jaritimonen.com/#website" },
       "author": { "@id": "https://jaritimonen.com/#person" },
       "about": { "@id": "https://ohmlens.com/#app" },
+      "primaryImageOfPage": { "@type": "ImageObject", "url": "https://jaritimonen.com/lab/ohmlens/ohmlens-circuit-1200.webp", "width": 1200, "height": 600 },
       "breadcrumb": { "@id": "https://jaritimonen.com/lab/ohmlens/#breadcrumb" }
     },
     {
@@ -68,6 +69,7 @@
       "applicationCategory": "EducationalApplication",
       "operatingSystem": "Any (web browser)",
       "isAccessibleForFree": true,
+      "screenshot": "https://jaritimonen.com/lab/ohmlens/ohmlens-circuit-1200.webp",
       "inLanguage": "en",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
       "creator": { "@type": "Person", "@id": "https://jaritimonen.com/#person", "name": "Jari Timonen", "url": "https://jaritimonen.com/" }
@@ -99,7 +101,10 @@
 </div>
 </section>
 
-<!-- TODO: add a screenshot: <img src="/lab/ohmlens/lesson.webp" alt="An OhmLens lesson with a live circuit and sliders" width="1200" height="600" loading="lazy"> -->
+<figure class="p-shot">
+<img src="/lab/ohmlens/ohmlens-circuit-1200.webp" srcset="/lab/ohmlens/ohmlens-circuit-800.webp 800w, /lab/ohmlens/ohmlens-circuit-1200.webp 1200w" sizes="(min-width: 1200px) 1136px, calc(100vw - 40px)" width="1200" height="600" alt="OhmLens lesson: a 9 V battery, 1 kΩ resistor and LED circuit showing 7.2 mA of current and 52 mW of heat in the resistor, with a slider to change the resistance" decoding="async" fetchpriority="high">
+<figcaption>The first lesson. Drag the slider and the current, the LED and the heat in the resistor change live.</figcaption>
+</figure>
 <!-- TODO: add a "Why I built it" paragraph in your own words. -->
 
 <div class="p-body">
